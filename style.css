@@ -1,8 +1,37 @@
-/* Basic Reset */
-* {
+/* Remove default page margins */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh; 
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+  border-radius: 10px;
+}
+.hero-text h1{
+  font-size: 2.5rem;
+  margin: 0;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 10px 0 0 0;
 }
 body {
   font-family: Arial, sans-serif;
@@ -14,10 +43,8 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
-
-/* Header */
 .site-header {
-  background: hsla(149, 100%, 25%, 0.81); /* change to your school colour */
+  background: hsla(149, 100%, 25%, 0.81);
   color: #fff;
   padding: 20px 0;
 }
@@ -84,3 +111,293 @@ body {
     color: #222;
     font-family: Verdana, sans-serif;
 }
+#events {
+text-align: center;
+padding: 50px 0;
+}
+.event-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.event {
+  width:300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow:hidden;
+  text-align: cover;
+}
+.event p {
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+/* === EVENTS SECTION === */
+#events {
+  text-align: center;
+  padding: 60px 5%;
+  background-color: #f2f6f8;
+}
+
+#events h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+  position: relative;
+}
+
+#events h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #53a653;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* === FLEX CONTAINER === */
+.events-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* ensures equal height */
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* === EVENT CARD === */
+.event {
+  flex: 1 1 300px; /* flexible width, min 300px */
+  max-width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* === IMAGE === */
+.event img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* === TEXT === */
+.event-content {
+  flex-grow: 1; /* fills remaining height */
+  padding: 20px;
+}
+
+.event-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event {
+    max-width: 90%;
+  }
+
+  #events h2 {
+    font-size: 1.8rem;
+  }
+}
+/* === EVENTS SECTION === */
+#events {
+  text-align: center;
+  padding: 60px 5%;
+  background-color: #f2f6f8;
+}
+
+#events h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+  position: relative;
+}
+
+#events h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #53a653;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* === FLEX CONTAINER === */
+.events-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* ensures equal height */
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* === EVENT CARD === */
+.event {
+  flex: 1 1 300px; /* flexible width, min 300px */
+  max-width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* === IMAGE === */
+.event img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* === TEXT === */
+.event-content {
+  flex-grow: 1; /* fills remaining height */
+  padding: 20px;
+}
+
+.event-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event {
+    max-width: 90%;
+  }
+
+  #events h2 {
+    font-size: 1.8rem;
+  }
+}
+.students-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* ensures all cards in a row are same height */
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+}
+
+.student {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.student:hover {
+  transform: translateY(-5px);
+}
+
+.student img {
+  width: 100%;
+  height: 220px; /* all images the same height */
+  object-fit: cover; /* crops nicely without distortion */
+}
+
+.student p {
+  flex-grow: 1;
+  padding: 15px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event {
+    width: 90%;
+  }
+}
+.student-card img {
+  width: 100%;
+  height: 250px;  /* You can adjust to 220px, 300px etc */
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+}
+.student-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px; /* Adjust for your layout */
+  margin: 15px auto;
+}
+.student-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}#students {
+  text-align: center;
+  padding: 60px 5%;
+  background-color: #f2f6f8;
+}
+
+#students h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+  position: relative;
+}
+
+#students h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #53a653;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
